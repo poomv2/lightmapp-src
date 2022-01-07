@@ -1,0 +1,109 @@
+// Typography
+//
+// Base font styles for headings and links.
+
+// h1, .h1,
+// h2, .h2,
+// h3, .h3,
+// h4, .h4,
+// h5, .h5,
+// h6, .h6,
+// .h {
+//   font-family: var(--headings-font-family);
+//   font-weight: bold;
+//   margin: 0 0 0.5em;
+//   color: var(--headings-color);
+// }
+
+// h1, .h1 {
+//   font-size: var(--headings-sizes-h1);
+// }
+
+// h2, .h2 {
+//   font-size: var(--headings-sizes-h2);
+// }
+
+// h3, .h3 {
+//   font-size: var(--headings-sizes-h3);
+// }
+
+// h4, .h4 {
+//   font-size: var(--headings-sizes-h4);
+// }
+
+// h5, .h5 {
+//   font-size: var(--headings-sizes-h5);
+// }
+
+// h6, .h6 {
+//   font-size: var(--headings-sizes-h6);
+// }
+
+// p {
+//   margin: 0 0 1em;
+// }
+
+// a {
+//   color: var(--base-link-color);
+//   &:focus {
+//     text-decoration: none;
+//   }
+//   @include media('hover') {
+//     &:hover {
+//       text-decoration: none;
+//     }
+//   }
+// }
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: $body-font;
+  font-size: 16px;
+  line-height: 1.6;
+  background-color: $dark-bg-color;
+  color: $white;
+}
+
+h1, h2 {
+  margin: 0;
+  font-weight: 700;
+  text-align: center;
+}
+
+h1 {    
+  font-size: 53px;
+  line-height: 55px;
+  letter-spacing: -.3px;
+  background: -webkit-linear-gradient(-90deg, #FFA1FF 0%, #D905F0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h2 {
+  margin: 0 auto 50px;    
+  background: linear-gradient(-90deg, #29FFF5 0%, #2973FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h3 {
+  margin-top: 15px;
+  margin-bottom: 20px;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 35px;
+  background: -webkit-linear-gradient(180deg, #FFA1FF 0%, #D905F0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
