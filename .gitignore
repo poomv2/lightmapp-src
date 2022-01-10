@@ -1,6 +1,5 @@
 node_modules
 assets
-helpers
 production
 system_files
 package-lock.json
