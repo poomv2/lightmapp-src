@@ -23,11 +23,11 @@
     }
   }
 
-  
 
-  .video-placeholder {    
+
+  .video-placeholder {
     display: none;
-    align-self: center;    
+    align-self: center;
 
     @include breakpoint(tablet) {
       display: inline-block;
@@ -41,9 +41,9 @@
         display: none;
       }
     }
-  }    
+  }
 }
-  
+
 .discover {
   position: relative;
   z-index: 2;
@@ -149,7 +149,7 @@
       display: flex;
       flex-direction: column;
       margin-top: 30px;
-      padding:10px 25px;
+      padding: 10px 25px;
       background-color: #010042;
       border-radius: 10px;
       align-items: center;
@@ -160,7 +160,7 @@
         flex-direction: row;
         border-radius: 30px;
         gap: 20px;
-        padding:6px 25px;
+        padding: 6px 25px;
       }
 
       span {
@@ -186,7 +186,7 @@
           top: 0;
           left: 0;
           display: inline-block;
-          width: 60px;
+          width: 0px;
           height: 10px;
           border-radius: 30px;
           background-image: $light-grad;
@@ -211,26 +211,47 @@
         gap: 30px;
       }
 
-      input {
+      .email-signup-input-cover {
         flex-grow: 1;
-        background-color: #010042;
-        border: 0;
-        border-radius: 10px;
-        padding: 17px 20px 15px;
-        color: #fff;
+        height: 80px;
 
-        &:focus {
-          border: 1px solid #4022F3;
-        }        
+        input {
+          width: 100%;
+          background-color: #010042;
+          border: 0;
+          border-radius: 10px;
+          padding: 17px 20px 15px;
+          color: #fff;
 
-        &::placeholder {
-          color: #9684FF;
-          font-style: italic;
+          &:focus {
+            border: 1px solid #4022F3;
+          }
+
+          &::placeholder {
+            color: #9684FF;
+            font-style: italic;
+          }
         }
       }
 
       .btn {
         line-height: 38px;
+        height: 56px;
+      }
+    }
+
+    .email-signup-validation {
+      display: none;
+      justify-content: space-between;
+      padding: 5px 20px 15px;
+
+      span {
+        color: rgb(244, 67, 54);
+        font-size: 12px;
+      }
+
+      .icon-error {
+        color: rgb(244, 67, 54);
       }
     }
   }

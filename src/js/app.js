@@ -5,8 +5,10 @@
 import $ from 'jquery';
 
 import dots from './modules/dots';
+import subscription from './modules/subscription';
 
 // When DOM is ready
 $(() => {
   dots();
+  subscription();
 });

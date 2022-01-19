@@ -11,6 +11,8 @@ module.exports = {
     buildImages: 'build-images',
     cleanBuild: 'clean-build',
     copyFiles: 'copy-files',
+    dotenv: 'dotenv',
+    fonts: 'fonts',
     copyFilesProd: 'copy-files-production',
     browserSync: 'browser-sync',
     watch: 'watch',
