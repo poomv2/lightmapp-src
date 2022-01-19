@@ -6,10 +6,10 @@
 <body>
     <span class="sphere"></span>
 
-    
+
 
     <header class="site-header">
-        
+
         <!-- Floating balls -->
         <span class="sphere-1"></span>
         <span class="sphere-2"></span>
@@ -18,7 +18,7 @@
         <span class="circle-bg-2"></span>
 
         <a class="site-logo" href="/"><img src="./images/logo.svg" alt="Lightmapp Logo"></a>
-        
+
         <nav class="site-nav">
             <ul>
                 <li><a href="#">Contact Us</a></li>
@@ -28,7 +28,7 @@
                     </a>
                 </li>
             </ul>
-        </nav>         
+        </nav>
     </header>
     <div class="container">
         <div class="header-hero">
@@ -44,7 +44,7 @@
                 </a>
             </nav>
         </div>
-        
+
     </div>
 
     <section class="header-carousel">
@@ -57,7 +57,7 @@
         <div class="container">
             <div class="video-inner">
                 <h2>A face-to-face social network where you connect over awesome content.</h2>
-    
+
                 <a class="video-placeholder" href="#"><img src="./images/video-placeholder.png" alt="Video placeholder"></a>
                 <a class="video-placeholder--mobile" href="#"><img src="./images/video-placeholder-mobile.png" alt=""></a>
             </div>
@@ -72,7 +72,7 @@
         <div class="container">
             <h2>Discover and discuss new interests, from across the Internet and beyond.</h2>
 
-            
+
 
             <div class="row">
                 <div class="col-md-8">
@@ -105,7 +105,7 @@
                             </div>
                         </a>
                     </div>
-                    
+
                 </div>
                 <div class="col-md-4">
                     <div class="grad-display">
@@ -126,25 +126,27 @@
                 <p>Be one of the first 10k signups and get 1000 Lume bonus.</p>
 
                 <div class="range">
-                    <span>2,000/10k</span>
+                    <span class="range__value">0/10k</span>
                     <span class="range__bar"></span>
                     <small>Lume bonuses claimed</small>
                 </div>
 
                 <form class="email-signup" action="">
-                    <input type="email" placeholder="Enter your email">
-                    <a href="#" class="btn btn-primary">Join Beta</a>
+                    <div class="email-signup-input-cover">
+                        <input id="join-input" type="email" placeholder="Enter your email">
+                        <div class="email-signup-validation">
+                            <span></span><div class="icon-error"></div>
+                        </div>
+                    </div>
+                    <a id="join-btn" href="" class="btn btn-primary">Join Beta</a>
                 </form>
             </div>
         </div>
     </section>
 
     @@include('../partials/components/footer.html')
+    @@include('../partials/scripts/common.html')
 
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="js/app-min.js"></script>   
 </body>
 </html>
 

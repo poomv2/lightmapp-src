@@ -3,3 +3,5 @@ assets
 production
 system_files
 package-lock.json
+env.json
+.env

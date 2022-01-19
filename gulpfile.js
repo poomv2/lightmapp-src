@@ -43,6 +43,8 @@ const copyFiles = require('./tasks/copy-files');
 const copyFilesProd = require('./tasks/copy-files-production');
 const browserSync = require('./tasks/browser-sync-server');
 const watch = require('./tasks/watch');
+const dotenv = require('./tasks/dot-env');
+const fonts = require('./tasks/fonts');
 
 /**
  * Clean build folders
@@ -115,10 +117,21 @@ gulp.task(global.task.browserSync, browserSync({ browserSyncInstance }));
 gulp.task(global.task.watch, watch({ browserSyncInstance }));
 
 /**
+ * dotenv to the build folder
+ */
+gulp.task(global.task.dotenv, dotenv());
+
+/**
+ * dotenv to the build folder
+ */
+gulp.task(global.task.fonts, fonts());
+
+/**
  * Develop mode - with browser sync, file watch & live reload
  */
 gulp.task('default', gulp.series(
   global.task.cleanBuild,
+  global.task.dotenv,
   global.task.lintJs,
   gulp.parallel(
     gulp.series(
@@ -136,6 +149,7 @@ gulp.task('default', gulp.series(
   ),
   global.task.buildImages,
   global.task.copyFiles,
+  global.task.fonts,
   gulp.parallel(
     global.task.browserSync,
     global.task.watch,
@@ -148,6 +162,7 @@ gulp.task('default', gulp.series(
 gulp.task(global.task.build, gulp.series(
   global.task.cleanBuild,
   global.task.lintJs,
+  global.task.dotenv,
   gulp.parallel(
     gulp.series(
       global.task.buildHtml,
@@ -164,5 +179,6 @@ gulp.task(global.task.build, gulp.series(
   ),
   global.task.buildImages,
   global.task.copyFiles,
+  global.task.fonts,
   global.task.copyFilesProd,
 ));
