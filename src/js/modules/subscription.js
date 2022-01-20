@@ -12,7 +12,7 @@ const setCounter = (totalJoined) => {
   const progressWidth = rangeBarWidth < progress ? rangeBarWidth : progress;
 
   $('.range').append(`<style>.range__bar::before{ width: ${progressWidth}px !important; }</style>`);
-  rangeValueLabel.text(`${totalJoined}/10k`);
+  rangeValueLabel.text(totalJoined);
 };
 
 const setEmailValidationText = (text) => {
@@ -79,8 +79,10 @@ const subscription = () => {
     setEmailValidationText();
   });
 
-  $('#join-btn').click((e) => {
-    e.preventDefault();
+  $('.email-signup').on('submit', (event) => {
+    event.preventDefault();
+    event.stopImmediatePropagation();
+
     const email = inputElement.val();
 
     if (emailValidation(email)) {

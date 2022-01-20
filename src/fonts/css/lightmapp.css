@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'lightmapp';
-  src: url('../font/lightmapp.eot?65195337');
-  src: url('../font/lightmapp.eot?65195337#iefix') format('embedded-opentype'),
-       url('../font/lightmapp.woff2?65195337') format('woff2'),
-       url('../font/lightmapp.woff?65195337') format('woff'),
-       url('../font/lightmapp.ttf?65195337') format('truetype'),
-       url('../font/lightmapp.svg?65195337#lightmapp') format('svg');
+  src: url('../lightmapp/lightmapp.eot?65195337');
+  src: url('../lightmapp/lightmapp.eot?65195337#iefix') format('embedded-opentype'),
+       url('../lightmapp/lightmapp.woff2?65195337') format('woff2'),
+       url('../lightmapp/lightmapp.woff?65195337') format('woff'),
+       url('../lightmapp/lightmapp.ttf?65195337') format('truetype'),
+       url('../lightmapp/lightmapp.svg?65195337#lightmapp') format('svg');
   font-weight: normal;
   font-style: normal;
 }
