@@ -12,7 +12,6 @@ module.exports = {
     cleanBuild: 'clean-build',
     copyFiles: 'copy-files',
     dotenv: 'dotenv',
-    fonts: 'fonts',
     copyFilesProd: 'copy-files-production',
     browserSync: 'browser-sync',
     watch: 'watch',
@@ -36,6 +35,7 @@ module.exports = {
     vendorStylesSrc: 'vendor.scss',
     vendorStyles: 'vendor.css',
     vendorStylesMin: 'vendor.min.css',
+    env: 'env.json',
   },
   buildHtml: {
     templates: 'src/html/templates',
@@ -85,5 +85,5 @@ module.exports = {
   },
   isFixJs() {
     return process.argv[process.argv.length - 1] === this.task.fixJs;
-  }
+  },
 };
