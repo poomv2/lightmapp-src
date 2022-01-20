@@ -23,8 +23,6 @@
  *
  */
 
-'use strict';
-
 const gulp = require('gulp');
 const browserSyncInstance = require('browser-sync').create();
 
@@ -44,7 +42,6 @@ const copyFilesProd = require('./tasks/copy-files-production');
 const browserSync = require('./tasks/browser-sync-server');
 const watch = require('./tasks/watch');
 const dotenv = require('./tasks/dot-env');
-const fonts = require('./tasks/fonts');
 
 /**
  * Clean build folders
@@ -122,11 +119,6 @@ gulp.task(global.task.watch, watch({ browserSyncInstance }));
 gulp.task(global.task.dotenv, dotenv());
 
 /**
- * dotenv to the build folder
- */
-gulp.task(global.task.fonts, fonts());
-
-/**
  * Develop mode - with browser sync, file watch & live reload
  */
 gulp.task('default', gulp.series(
@@ -149,7 +141,6 @@ gulp.task('default', gulp.series(
   ),
   global.task.buildImages,
   global.task.copyFiles,
-  global.task.fonts,
   gulp.parallel(
     global.task.browserSync,
     global.task.watch,
@@ -179,6 +170,5 @@ gulp.task(global.task.build, gulp.series(
   ),
   global.task.buildImages,
   global.task.copyFiles,
-  global.task.fonts,
   global.task.copyFilesProd,
 ));

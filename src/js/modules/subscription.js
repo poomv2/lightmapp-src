@@ -4,7 +4,7 @@ import * as env from '../../config/env';
 const URL = `${env.API_URL}/api/v.1/landing/`;
 const emailRegEx = /^[a-zA-Z0-9.!#$%&\'*+\\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)+$/;
 
-const setCounter = totalJoined => {
+const setCounter = (totalJoined) => {
   const rangeValueLabel = $('.range__value');
   const rangeBarWidth = $('.range__bar')[0].clientWidth;
   const progress = (rangeBarWidth / 10000) * totalJoined;
@@ -15,7 +15,7 @@ const setCounter = totalJoined => {
   rangeValueLabel.text(`${totalJoined}/10k`);
 };
 
-const setEmailValidationText = text => {
+const setEmailValidationText = (text) => {
   if (text) {
     $('.email-signup-validation').css('display', 'flex');
     const validationLabel = $('.email-signup-validation>span');
@@ -25,26 +25,27 @@ const setEmailValidationText = text => {
   }
 };
 
-const emailValidation = email => {
-  let validationText = '';
+const emailValidation = (email) => {
+  const validation = { text: '', isValid: true };
   if (!emailRegEx.test(email) || !email.length) {
-    validationText = 'Please, enter an email address.';
+    validation.text = 'Please, enter an email address.';
+    validation.isValid = false;
   }
 
-  setEmailValidationText(validationText);
-  return !validationText;
+  setEmailValidationText(validation.text);
+  return validation.isValid;
 };
 
-const sendEmail = email => {
+const sendEmail = (email) => {
   const data = {
-    email
+    email,
   };
 
   $.ajax({
     url: URL,
     method: 'POST',
     data,
-    success: function ({ totalJoined }) {
+    success({ totalJoined }) {
       setCounter(totalJoined);
       setEmailValidationText();
     },
@@ -53,8 +54,8 @@ const sendEmail = email => {
         const errorText = JSON.parse(err.responseText).email;
         setEmailValidationText(errorText);
       }
-    }
-  })
+    },
+  });
 };
 
 const getTotalJoined = () => {
@@ -62,9 +63,9 @@ const getTotalJoined = () => {
     url: URL,
     type: 'GET',
     dataType: 'json',
-    success: function ({ totalJoined }) {
+    success({ totalJoined }) {
       setCounter(totalJoined);
-    }
+    },
   });
 };
 
@@ -73,12 +74,12 @@ const subscription = () => {
 
   const inputElement = $('#join-input');
 
-  inputElement.change(e => {
+  inputElement.change((e) => {
     e.preventDefault();
     setEmailValidationText();
   });
 
-  $('#join-btn').click(e => {
+  $('#join-btn').click((e) => {
     e.preventDefault();
     const email = inputElement.val();
 
