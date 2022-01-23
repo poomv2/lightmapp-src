@@ -27,6 +27,7 @@ body {
     background-image: url('../images/backgrounds/sphere-1.png');
     background-size: cover;
     background-repeat: no-repeat;
+    animation: bounce 6s linear infinite;
 
     @include breakpoint(tablet) {
       display: inline-block;
@@ -44,6 +45,7 @@ body {
     background-image: url('../images/backgrounds/sphere-2.png');
     background-size: cover;
     background-repeat: no-repeat;
+    animation: bounce 6s 1s linear infinite;
 
     @include breakpoint(tablet) {
       display: inline-block;
@@ -62,12 +64,20 @@ body {
     border-radius: 50%;
     box-shadow: 0 0 100px 130px #1700FE;
     opacity: .5;
+    animation: flicker-slow 3000ms infinite;
 
     @include breakpoint(tablet) {
       right: -40px;
       top: -130px;
       width: 300px;
       height: 300px;
+    }
+
+    .discover & {
+      z-index: initial;
+      right: 50%;
+      top: -350px;
+      margin-right: -40px;
     }
   
     &--purple {
@@ -85,6 +95,18 @@ body {
         right: 10px;
         width: 175px;
         height: 175px;
+      }
+
+      .discover & {
+        z-index: initial;
+        right: 50%;
+        top: -280px;
+        margin-right: -20px;
+
+        @include breakpoint(tablet) {
+          top: -180px;
+          margin-right: -20px;
+        }
       }
     }
   }
@@ -106,6 +128,19 @@ body {
       width: 500px;
       height: 500px;
     }
+
+    .discover & {
+      z-index: initial;
+      top: -190px;
+      right: 50%;
+      margin-right: -125px;
+      background-color: #030066;
+
+      @include breakpoint(tablet) {
+        top: -390px;
+        margin-right: -250px;
+      }
+    }
   }
   
   .site-nav {
@@ -121,14 +156,6 @@ body {
       li {
         
         text-transform: uppercase;
-  
-        &:first-child {
-          display: none;
-  
-          @include breakpoint(tablet) {
-            display: inline-block;
-          }
-        }
   
         a {
           display: inline-block;
@@ -161,16 +188,17 @@ body {
     gap: 30px;
     width: 100%;
     margin: 10px auto;
-    margin-bottom: 200px;
+    margin-bottom: 200px;  
 
     @include breakpoint(tablet) {
-      // width: 43%;
       max-width: 477px;
       margin-bottom: 160px;
     }
 
     h1 {
-      padding: 0 100px;
+      padding: 0 30px;
+      opacity: 0;
+      animation: fade-down 800ms forwards;
 
       @include breakpoint(tablet) {
         padding: 0;
@@ -182,6 +210,8 @@ body {
       margin-bottom: 5px;
       line-height: 27px;
       text-align: center;
+      opacity: 0;
+      animation: fade-down 800ms 300ms forwards;
 
       @include breakpoint(tablet) {
         padding: 0;
@@ -191,6 +221,8 @@ body {
     nav {
       display: flex;
       gap: 30px;
+      opacity: 0;
+      animation: explode-fade 800ms 650ms forwards;
     }
   }
   
@@ -202,22 +234,7 @@ body {
     height: 300px;
     background-color: transparent;
   
-    .planet {
-      position: fixed;
-      bottom: 30px;
-      z-index: 1;
-      display: inline-block;
-      margin: auto;
-      width: 600px;
-      height: 600px;
-      background-image: linear-gradient(150deg, #B303E5 15%, #8A0BE5 30%, #671BD1 50%, #4A1081 100%);
-      border-radius: 50%;
-      box-shadow: 0 0 150px 60px #1700FE;
-
-      @include breakpoint(tablet) {
-        bottom: initial;
-      }
-    }
+    
   
     .profile-carousel {
       position: relative;
@@ -243,4 +260,22 @@ body {
     }
   }
   
-  
+  .planet {
+    position: fixed;
+    top: 630px;
+    left: 50%;
+    z-index: 1;
+    display: inline-block;
+    margin: auto;
+    margin-left: -300px;
+    width: 600px;
+    height: 600px;
+    background-image: linear-gradient(150deg, #B303E5 15%, #8A0BE5 30%, #671BD1 50%, #4A1081 100%);
+    border-radius: 50%;
+    box-shadow: 0 0 150px 60px #1700FE;
+    animation: explode 1000ms;
+
+    @include breakpoint(tablet) {
+      top: 500px;
+    }
+  }

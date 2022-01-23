@@ -23,14 +23,19 @@
     }
   }
 
-
-
   .video-placeholder {
     display: none;
     align-self: center;
+    transition: all 300ms;
 
     @include breakpoint(tablet) {
       display: inline-block;
+    }
+
+    @include breakpoint(desktop) {
+      &:hover {
+        transform: translateY(-15px) scale(101%);
+      }
     }
 
     &--mobile {
@@ -47,11 +52,11 @@
 .discover {
   position: relative;
   z-index: 2;
-  padding: 80px 0 100px;
+  padding: 120px 0 80px;
   background-color: #000022;
 
   @include breakpoint(tablet) {
-    padding: 130px 0 150px;
+    padding: 220px 0 150px;
   }
 
   h2 {
@@ -59,6 +64,48 @@
 
     @include breakpoint(tablet) {
       width: 60%;
+    }
+  }
+
+  .sphere-container {
+    position: relative;
+    display: inline-block;
+  }
+
+  .sphere-3 {
+    z-index: 4;
+    position: absolute;
+    top: -150px;
+    left: 230px;
+    margin-left: -30px;
+    display: none;
+    width: 66px;
+    height: 66px;
+    background-image: url('../images/backgrounds/sphere-3.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation: bounce 6s 1s linear infinite;
+
+    @include breakpoint(tablet) {
+      display: inline-block;
+    }
+  }
+  
+  .sphere-4 {
+    z-index: 4;
+    position: absolute;
+    top: -260px;
+    right: 0;
+    display: none;
+    width: 137px;
+    height: 137px;
+    background-image: url('../images/backgrounds/sphere-4.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation: bounce 6s linear infinite;
+
+    @include breakpoint(tablet) {
+      display: inline-block;
     }
   }
 }
@@ -73,6 +120,12 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+
+  @include breakpoint(tablet) {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
 }
 
 .signup {
@@ -131,9 +184,12 @@
       font-size: 42px;
       line-height: 48px;
       letter-spacing: -.3px;
-      background: -webkit-linear-gradient(180deg, #FFA1FF 0%, #D905F0 100%);
+      background: linear-gradient(-90deg, #FFA1FF 20%, #D905F0 40%, #D905F0 60%, #FFA1FF 80%);
+      background-size: 200%;
+      background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      animation: grad-flow 8s linear infinite;
     }
 
     p {
@@ -218,13 +274,17 @@
         input {
           width: 100%;
           background-color: #010042;
-          border: 0;
+          border: 1px solid transparent;
           border-radius: 10px;
           padding: 17px 20px 15px;
           color: #fff;
 
           &:focus {
             border: 1px solid #4022F3;
+          }
+
+          &:focus-visible {
+            outline: 0;
           }
 
           &::placeholder {
@@ -235,6 +295,7 @@
       }
 
       .btn {
+        margin: 0 auto;
         line-height: 38px;
         height: 56px;
       }

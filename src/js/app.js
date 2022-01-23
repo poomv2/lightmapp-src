@@ -4,11 +4,11 @@
 // Feel free with using ES6 here.
 import $ from 'jquery';
 
-import dots from './modules/dots';
+import phoneanimation from './modules/phone-animation';
 import subscription from './modules/subscription';
 
 // When DOM is ready
 $(() => {
-  dots();
+  phoneanimation();
   subscription();
 });
