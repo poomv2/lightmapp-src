@@ -4,11 +4,12 @@
 // Feel free with using ES6 here.
 import $ from 'jquery';
 
-import phoneanimation from './modules/phone-animation';
+import './modules/phone-animation';
 import subscription from './modules/subscription';
+import './modules/contact';
+import './modules/parallax';
 
 // When DOM is ready
 $(() => {
-  phoneanimation();
   subscription();
 });

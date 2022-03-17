@@ -120,11 +120,13 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  background-position: -420px;
 
   @include breakpoint(tablet) {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    background-position: center;
   }
 }
 

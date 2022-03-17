@@ -36,5 +36,4 @@ $('#shop_rewards').on('mouseenter',
     $('#shop_rewards').addClass('tile--active');
     $('.phone').addClass('phone--shop');
   }).on('mouseleave', () => {
-
 });

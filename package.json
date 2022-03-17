@@ -65,6 +65,8 @@
     "lint": "npm run lint-html lint-js"
   },
   "dependencies": {
+    "aos": "^2.3.4",
+    "clipboard": "^2.0.10",
     "gulp-dotenv": "^0.2.2",
     "jquery": "3.5.1",
     "normalize.css": "8.0.1"

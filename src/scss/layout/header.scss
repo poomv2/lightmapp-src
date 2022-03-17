@@ -18,16 +18,16 @@ body {
   
   .sphere-1 {
     z-index: 4;
-    position: absolute;
+    position: fixed;
     top: 400px;
-    left: 100px;
+    left: 300px;
     display: none;
     width: 120px;
     height: 120px;
     background-image: url('../images/backgrounds/sphere-1.png');
     background-size: cover;
     background-repeat: no-repeat;
-    animation: bounce 6s linear infinite;
+    // animation: bounce 6s linear infinite;
 
     @include breakpoint(tablet) {
       display: inline-block;
@@ -35,17 +35,17 @@ body {
   }
   
   .sphere-2 {
-    z-index: 4;
-    position: absolute;
+    z-index: 5;
+    position: fixed;
     top: 600px;
-    right: 100px;
+    right: 300px;
     display: none;
     width: 140px;
     height: 140px;
     background-image: url('../images/backgrounds/sphere-2.png');
     background-size: cover;
     background-repeat: no-repeat;
-    animation: bounce 6s 1s linear infinite;
+    // animation: bounce 6s 1s linear infinite;
 
     @include breakpoint(tablet) {
       display: inline-block;
@@ -163,7 +163,6 @@ body {
           font-weight: 700;
           color: $white;
           letter-spacing: .8px;
-          transition: all 300ms;
   
           &:hover {
             transform: translateY(-2px);
@@ -173,6 +172,83 @@ body {
   
         .btn {
           min-width: initial;
+
+          &:hover { transform: translateY(0); }
+        }
+
+        .btn-inner.small {
+          padding: 6px 6px 6px 23px;
+        }
+
+        .copied {
+          display: flex;
+          gap: 10px;
+          align-items: center;
+        }
+
+        .tick-icon {
+          display: inline-block;
+          width: 16px;
+          height: 16px;
+          background-image: url('../images/icons/tick-icon.svg');
+          background-repeat: no-repeat;
+          background-size: 16px;
+          background-position: center;
+        }
+
+        .copy-icon {
+          display: inline-block;
+          width: 30px;
+          height: 30px;
+          border-radius: 5px;
+          border: 0;
+          background-color: #4022F3;
+          background-image: url('../images/icons/clipboard-copy-icon.svg');
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: 18px;
+        }
+        
+        .contact-text {
+          &.hidden { display: none; }
+        }
+
+        .email-text, .copied-text { 
+          display: flex; 
+          gap: 23px;
+          align-items: center;
+          font-size: 15px;
+          font-weight: 400;
+          letter-spacing: 0;
+          text-transform: initial;
+
+          &.hidden {
+            display: none;
+          }         
+
+          .copy-icon {
+            opacity: .8;
+            transition: all 300ms;
+
+            &:hover, &:focus { 
+              opacity: 1;
+              outline: 0; 
+            }
+
+            &:active {
+              outline: 0;
+              transform: translateY(1px);
+            }            
+          }
+        }
+
+        .email-text { opacity: 1; }
+
+        .copied-text {          
+          transition: opacity 500ms;
+          color: #73B573;        
+
+          &.show { opacity: 1; }
         }
       }
     }
@@ -188,17 +264,17 @@ body {
     gap: 30px;
     width: 100%;
     margin: 10px auto;
-    margin-bottom: 200px;  
+    margin-bottom: 400px;  
 
     @include breakpoint(tablet) {
       max-width: 477px;
-      margin-bottom: 160px;
+      margin-bottom: 500px;
     }
 
     h1 {
       padding: 0 30px;
       opacity: 0;
-      animation: fade-down 800ms forwards;
+      animation: fade-down 800ms forwards, grad-flow 8s linear infinite;
 
       @include breakpoint(tablet) {
         padding: 0;
@@ -278,4 +354,13 @@ body {
     @include breakpoint(tablet) {
       top: 500px;
     }
+  }
+
+  .header-video {
+    position: absolute;
+    z-index: 4;
+    width: 1850px;
+    top: 500px;
+    left: 50%;
+    margin-left: -925px;
   }
