@@ -1,33 +1,53 @@
 body {
     overflow-x: hidden;
   }
+
+  .site-wrapper { overflow: hidden; height: 100%; }
+
+  .sphere-wrapper { 
+    position: relative;
+    max-width: 1660px;
+    margin: auto;
+  }
   
   .site-header {
     position: relative;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     padding: 40px;
     margin: auto;
     max-width: 1440px;
+    gap: 30px;
+
+    @include breakpoint(tablet) {
+      flex-direction: row;
+      gap: 0;
+    }
   }
   
   .site-logo {
     position: relative;
     z-index: 5;
+    text-align: center;
+
+    @include breakpoint(tablet) {
+      text-align: left;
+    }
   }
   
   .sphere-1 {
     z-index: 4;
-    position: fixed;
+    position: absolute;
     top: 400px;
-    left: 300px;
+    left: 10%;
     display: none;
     width: 120px;
     height: 120px;
     background-image: url('../images/backgrounds/sphere-1.png');
     background-size: cover;
     background-repeat: no-repeat;
-    // animation: bounce 6s linear infinite;
+    animation: bounce 6s infinite ease-in-out;
 
     @include breakpoint(tablet) {
       display: inline-block;
@@ -36,16 +56,16 @@ body {
   
   .sphere-2 {
     z-index: 5;
-    position: fixed;
+    position: absolute;
     top: 600px;
-    right: 300px;
+    right: 10%;
     display: none;
     width: 140px;
     height: 140px;
     background-image: url('../images/backgrounds/sphere-2.png');
     background-size: cover;
     background-repeat: no-repeat;
-    // animation: bounce 6s 1s linear infinite;
+    animation: bounce 4s infinite ease-in-out;
 
     @include breakpoint(tablet) {
       display: inline-block;
@@ -151,10 +171,15 @@ body {
       display: flex;
       align-items: center;
       list-style: none;
-      gap: 35px;
+      gap: 0;
+      padding-left: 0;
+      justify-content: center;
+
+      @include breakpoint(tablet) {
+        gap: 35px;
+      }
   
-      li {
-        
+      li {        
         text-transform: uppercase;
   
         a {
@@ -282,7 +307,7 @@ body {
     }
   
     p {
-      padding: 0 50px;
+      padding: 0 30px;
       margin-bottom: 5px;
       line-height: 27px;
       text-align: center;
@@ -296,19 +321,36 @@ body {
   
     nav {
       display: flex;
-      gap: 30px;
+      gap: 15px;
       opacity: 0;
       animation: explode-fade 800ms 650ms forwards;
+
+      @include breakpoint(tablet) {
+        gap: 30px;
+      }
     }
   }
   
   .header-carousel {
-    position: relative;
-    display: flex;
+    position: absolute;
+    top: 700px;
+    display: none;
     justify-content: center;  
     width: 100%;
     height: 300px;
     background-color: transparent;
+
+    @include breakpoint(tablet) {
+      top: 630px;
+    }
+
+    @media not all and (min-resolution:.001dpcm)
+    { 
+      @supports (-webkit-appearance:none) {
+
+       display: flex;
+      }
+    }
   
     
   
@@ -360,7 +402,19 @@ body {
     position: absolute;
     z-index: 4;
     width: 1850px;
-    top: 500px;
+    top: 650px;
     left: 50%;
     margin-left: -925px;
+
+    @include breakpoint(tablet) {
+      top: 500px;
+    }
+
+    @media not all and (min-resolution:.001dpcm)
+    { 
+      @supports (-webkit-appearance:none) {
+
+       display: none;
+      }
+    }
   }

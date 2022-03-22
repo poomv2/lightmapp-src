@@ -4,156 +4,155 @@
 @@include('../partials/head/head.html')
 
 <body>
-    <span id="planet" class="planet"></span>
-    <span class="sphere"></span>
+    <div class="site-wrapper">
+        <span id="planet" class="planet"></span>
+        <span class="sphere"></span>
+        <div class="sphere-wrapper">
+            <span id="sphere" class="sphere-1"></span>
+            <span id="sphere2" class="sphere-2"></span>
 
-    <header class="site-header">
-        <!-- Floating balls -->
-        <span id="sphere" class="sphere-1"></span>
-        <span id="sphere2" class="sphere-2"></span>
-        <span class="circle-bg"></span>
-        <span class="circle-bg circle-bg--purple"></span>
-        <span class="circle-bg-2"></span>
-
-        <a class="site-logo" href="/"><img src="./images/logo.svg" alt="Lightmapp Logo"></a>
-
-        <nav class="site-nav">
-            <ul>
-                <li><a href="javascript:void(0)" class="btn btn-secondary btn-icon">
-                    
-                        <span class="btn-inner contact-text btn-copy">Contact</span>
-                        <span class="btn-inner email-text hidden">hello@lightmapp.com <button data-clipboard-text="hello@lightmapp.com" class="copy-icon">&nbsp;</button></span>
-                        <span class="btn-inner copied-text hidden">
-                            <span class="copied">
-                                <i class="tick-icon">&nbsp;</i>copied to clipboard! 
-                            </span>
-                            <button class="copy-icon">&nbsp;</button>
-                        </span>
-                    
-                </a></li>
-            </ul>
-        </nav>
-    </header>
-    <div class="container">
-        <div class="header-hero">
-            <h1>Flipping the script on social.</h1>
-            <p>Currency and rewards for everyone, posts and comments exclusively video, no targeted algorithms, no habit tracking, no ads.
-            </p>
-            <nav>
-                <a href="#" id="joinBeta_btn" class="btn btn-primary">
-                    <span>Join Beta</span>
-                </a>
-                <a href="#" class="btn btn-secondary">
-                    <span class="btn-inner"><img src="./images/icons/play-icon.svg" alt="">&nbsp;&nbsp;Quick Intro</span>
-                </a>
-            </nav>
-        </div>
-
-    </div>
-
-    <video class="header-video" src="./images/video/header-video.webm" loop muted autoplay playsinline></video>
-
-    <!-- 
-        # STATIC VERSION 
-        ## For use with Safari browsers not supporting WebM format.
-    -->
-    <!-- <section class="header-carousel">
-        <div class="profile-carousel"></div>
-        <div class="profile-phone"></div>
-    </section> -->
-
-    <div class="video-container">
-        <div class="container">
-            <div class="video-inner" data-aos="fade-up">
-                <h2>A face-to-face social network where you connect over awesome content.</h2>
-
-                <a class="video-placeholder" href="#"><img src="./images/video-placeholder.png" alt="Video placeholder"></a>
-                <a class="video-placeholder--mobile" href="#"><img src="./images/video-placeholder-mobile.png" alt=""></a>
-            </div>
-        </div>
-    </div>
-
-    <section class="discover">        
-        <span class="circle-bg"></span>
-        <span class="circle-bg circle-bg--purple"></span>
-        <span class="circle-bg-2"></span>
-
-        <div class="container" data-aos="fade-up">
-            <div class="sphere-container">
-                <span class="sphere-3"></span>
-                <span class="sphere-4"></span>
-                <h2>Discover and discuss new interests, from across the Internet and beyond.</h2>
-            </div>
-
-            <div class="row">
-                <div class="col-md-12 col-lg-7 col-xl-8">
-                    <div class="tiles">
-                        <a id="discuss_trends" href="javascript:void(0)" class="tile">
-                            <div class="tile__left">
-                                <h3>Discuss trends and content</h3>
-                                <p>Link a URL and share your thoughts through video comments</p>
-                            </div>
-                            <div class="tile__right">
-                                <img src="./images/icons/discuss-trends.png" alt="Discuss trends">
-                            </div>
+            <header class="site-header">
+                <!-- Floating balls -->
+                
+                <span class="circle-bg"></span>
+                <span class="circle-bg circle-bg--purple"></span>
+                <span class="circle-bg-2"></span>
+    
+                <a class="site-logo" href="/"><img src="./images/logo.svg" alt="Lightmapp Logo"></a>
+    
+                <nav class="site-nav">
+                    <ul>
+                        <li><a href="javascript:void(0)" class="btn btn-secondary btn-icon">
+                            
+                                <span class="btn-inner contact-text btn-copy">Contact</span>
+                                <span class="btn-inner email-text hidden">hello@lightmapp.com <button data-clipboard-text="hello@lightmapp.com" class="copy-icon">&nbsp;</button></span>
+                                <span class="btn-inner copied-text hidden">
+                                    <span class="copied">
+                                        <i class="tick-icon">&nbsp;</i>copied to clipboard! 
+                                    </span>
+                                    <button class="copy-icon">&nbsp;</button>
+                                </span>
+                            
+                        </a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div class="container">
+                <div class="header-hero">
+                    <h1>Flipping the script on social.</h1>
+                    <p>Currency and rewards for everyone, posts and comments exclusively video, no targeted algorithms, no habit tracking, no ads.
+                    </p>
+                    <nav>
+                        <a href="#" id="joinBeta_btn" class="btn btn-primary">
+                            <span>Join Beta</span>
                         </a>
-                        <a id="digital_currency" href="javascript:void(0)" class="tile">
-                            <div class="tile__left">
-                                <h3>Earn our social currency</h3>
-                                <p>Lume is added to your Wallet for creating and watching comments</p>
-                            </div>
-                            <div class="tile__right">
+                        <a href="#" class="btn btn-secondary">
+                            <span class="btn-inner"><img src="./images/icons/play-icon.svg" alt="">&nbsp;&nbsp;Quick Intro</span>
+                        </a>
+                    </nav>
+                </div>
+    
+            </div>
+    
+            <video class="header-video" src="./images/video/header-video.webm" loop muted autoplay playsinline></video>
+        </div>
+
+        <!-- 
+            # STATIC VERSION 
+            ## For use with Safari browsers not supporting WebM format.
+        -->
+        <section class="header-carousel">
+            <div class="profile-carousel"></div>
+            <div class="profile-phone"></div>
+        </section>
+
+        <div class="video-container">
+            <div class="container">
+                <div class="video-inner" data-aos="fade-up">
+                    <h2>A face-to-face social network where you connect over awesome content.</h2>
+
+                    <a class="video-placeholder" href="#"><img src="./images/video-placeholder.png" alt="Video placeholder"></a>
+                    <a class="video-placeholder--mobile" href="#"><img src="./images/video-placeholder-mobile.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+
+        <section class="discover">        
+            <span class="circle-bg"></span>
+            <span class="circle-bg circle-bg--purple"></span>
+            <span class="circle-bg-2"></span>
+
+            <div class="container" data-aos="fade-up">
+                <div class="sphere-container">
+                    <span class="sphere-3"></span>
+                    <span class="sphere-4"></span>
+                    <h2>Discover and discuss new interests, from across the Internet and beyond.</h2>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12 col-lg-7 col-xl-8">
+                        <div class="tiles">
+                            <a id="discuss_trends" href="javascript:void(0)" class="tile">
+                                <div class="tile__content">
+                                    <h3>Discuss trends and content</h3>
+                                    <p>Link a URL and share your thoughts through video comments</p>
+                                </div>                                
+                                <img src="./images/icons/discuss-trends.png" alt="Discuss trends">                                
+                            </a>
+                            <a id="digital_currency" href="javascript:void(0)" class="tile">
+                                <div class="tile__content">
+                                    <h3>Earn our social currency</h3>
+                                    <p>Lume is added to your Wallet for creating and watching comments</p>
+                                </div>
                                 <img src="./images/icons/earn-currency.png" alt="Earn Currency">
-                            </div>
-                        </a>
-                        <a id="shop_rewards" href="javascript:void(0)" class="tile">
-                            <div class="tile__left">
-                                <h3>Shop for rewards</h3>
-                                <p>Spend Lume in our Market to unlock free stuff</p>
-                            </div>
-                            <div class="tile__right">
+                            </a>
+                            <a id="shop_rewards" href="javascript:void(0)" class="tile">
+                                <div class="tile__content">
+                                    <h3>Shop for rewards</h3>
+                                    <p>Spend Lume in our Market to unlock free stuff</p>
+                                </div>
                                 <img src="./images/icons/shop-rewards.png" alt="Discuss trends">
-                            </div>
-                        </a>
+                            </a>
+                        </div>
+
                     </div>
-
-                </div>
-                <div class="col-md-6 col-lg-5 col-xl-4">
-                    <div class="grad-display">
-                        <div class="phone"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="checkers" class="checkers"></section>
-
-    <section class="signup">
-        <div class="signup-box" data-aos="fade-up">
-            <img src="./images/signup-header.png" alt="Sign up header">
-            <div class="signup-box__inner">
-                <h2>Add your email to join the Beta</h2>
-                <p>Be one of the first 10k signups and get 1000 Lume bonus!</p>
-
-                <div class="range">
-                    <span><span class="range__value">0</span>/10k</span>
-                    <span class="range__bar"></span>
-                    <small>Lume bonuses claimed</small>
-                </div>
-
-                <form class="email-signup" action="">
-                    <div class="email-signup-input-cover">
-                        <input id="join-input" type="email" placeholder="Enter your email" />
-                        <div class="email-signup-validation">
-                            <span></span><i class="icon-error"></i>
+                    <div class="col-md-6 col-lg-5 col-xl-4">
+                        <div class="grad-display">
+                            <div class="phone"></div>
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-primary">Join Beta</button>
-                </form>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <section id="checkers" class="checkers"></section>
+
+        <section class="signup">
+            <div class="signup-box" data-aos="fade-up">
+                <img src="./images/signup-header.png" alt="Sign up header">
+                <div class="signup-box__inner">
+                    <h2>Add your email to join the Beta</h2>
+                    <p>Be one of the first 10k signups and get 1000 Lume bonus!</p>
+
+                    <div class="range">
+                        <span><span class="range__value">0</span>/10k</span>
+                        <span class="range__bar"></span>
+                        <small>Lume bonuses claimed</small>
+                    </div>
+
+                    <form class="email-signup" action="">
+                        <div class="email-signup-input-cover">
+                            <input id="join-input" type="email" placeholder="Enter your email" />
+                            <div class="email-signup-validation">
+                                <span></span><i class="icon-error"></i>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Join Beta</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
 
     @@include('../partials/components/footer.html')
     @@include('../partials/scripts/common.html')
