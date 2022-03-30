@@ -333,7 +333,7 @@ body {
   
   .header-carousel {
     position: absolute;
-    top: 700px;
+    top: 790px;
     display: none;
     justify-content: center;  
     width: 100%;
@@ -357,12 +357,12 @@ body {
     .profile-carousel {
       position: relative;
       z-index: 3;
-      height: 200px;
-      width: 100%;
-      margin-top: -70px;
+      width: 2000px;
+      margin-top: -243px;
       background-image: url('../images/carousel.png');
       background-repeat: no-repeat;
       background-position: center;
+      background-size:1500px;
     }
   
     .profile-phone {
@@ -402,7 +402,7 @@ body {
     position: absolute;
     z-index: 4;
     width: 1850px;
-    top: 650px;
+    top: 590px;
     left: 50%;
     margin-left: -925px;
 
