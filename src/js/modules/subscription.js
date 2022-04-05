@@ -12,7 +12,7 @@ const setCounter = (totalJoined) => {
   const progressWidth = rangeBarWidth < progress ? rangeBarWidth : progress;
 
   $('.range').append(`<style>.range__bar::before{ width: ${progressWidth}px !important; }</style>`);
-  rangeValueLabel.text(totalJoined);
+  rangeValueLabel.text(totalJoined.toLocaleString('en-US'));
 };
 
 const setEmailValidationText = (text) => {
