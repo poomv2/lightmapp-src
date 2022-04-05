@@ -90,7 +90,7 @@
       display: inline-block;
     }
   }
-  
+
   .sphere-4 {
     z-index: 4;
     position: absolute;
@@ -225,6 +225,7 @@
       span {
         font-size: 24px;
         font-weight: 500;
+        overflow: auto;
       }
 
       &__bar {
