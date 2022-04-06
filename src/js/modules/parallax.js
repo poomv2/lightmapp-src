@@ -32,7 +32,7 @@ $('#joinBeta_btn').on('click',
 () => {
   $('html, body').animate({
     scrollTop: $('.signup').offset().top
-  }, 100);
+  }, 500);
 });
 
 
