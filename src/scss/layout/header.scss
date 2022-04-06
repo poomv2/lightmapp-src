@@ -315,12 +315,16 @@ body { overflow-x: hidden; }
   }
 
   h1 {
+    font-size: 50px;
+    line-height: 52px;
     padding: 0;
     opacity: 0;
     animation: fade-down 800ms forwards, grad-flow 8s linear infinite;
 
     @media screen and (min-width: 454px) and (max-width: 511px) {
       padding: 0 20px;
+      font-size: 53px;
+      line-height: 55px;
     }
 
     @media screen and (min-width: 512px) and (max-width: 767px) {
