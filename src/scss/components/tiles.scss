@@ -38,7 +38,13 @@
 
     &:first-child { margin-top: 0; }
 
-    img { max-width: 240px; }
+    img { 
+      max-width: 240px;
+
+      @media screen and (min-width: 992px) and (max-width: 1199px) {
+        display: none;
+      }
+    }
 
     h3 {
       margin-top: 0;
@@ -58,6 +64,10 @@
       @include breakpoint(tablet) {
         font-size: 18px;
         margin: initial;
+      }
+
+      @media screen and (min-width: 992px) and (max-width: 1199px) {
+        width: 100%;
       }
     }
 
@@ -121,12 +131,20 @@
     background-repeat: no-repeat;
     transition: all 800ms;
 
+    @media screen and (min-width: 992px) and (max-width: 1199px) {
+      top: -120px;
+    }
+
     @include breakpoint(widescreen) {
       top: -100px;
     }
 
     &--discuss {
       top: -50px;
+
+      @media screen and (min-width: 992px) and (max-width: 1199px) {
+        top: -120px;
+      }
 
       @include breakpoint(widescreen) {
         top: -100px;
@@ -136,6 +154,10 @@
     &--digital {
       top: -930px;
 
+      @media screen and (min-width: 992px) and (max-width: 1199px) {
+        top: -1010px;
+      }
+
       @include breakpoint(widescreen) {
         top: -980px;
       }
@@ -143,6 +165,10 @@
 
     &--shop {
       top: -1825px;
+
+      @media screen and (min-width: 992px) and (max-width: 1199px) {
+        top: -1905px;
+      }
 
       @include breakpoint(widescreen) {
         top: -1875px;

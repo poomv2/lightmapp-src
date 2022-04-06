@@ -164,8 +164,26 @@ body {
   }
   
   .site-nav {
+    display: none;
     position: relative;
     z-index: 3;
+
+    @include breakpoint(tablet) {
+      display: block;
+    }
+
+    &--footer { 
+      display: block;
+      margin-top: 50px;
+      margin-bottom: 0;
+
+      a { margin-bottom: 0; }
+
+      @include breakpoint(tablet) {
+        display: none;
+      }
+    
+    }
     
     ul {
       display: flex;
@@ -288,11 +306,12 @@ body {
     justify-content: space-between;
     gap: 30px;
     width: 100%;
-    margin: 10px auto;
+    margin: 50px auto 10px;
     margin-bottom: 400px;  
 
     @include breakpoint(tablet) {
       max-width: 477px;
+      margin: 10px auto 500px;
       margin-bottom: 500px;
     }
 
