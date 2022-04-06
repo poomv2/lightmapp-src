@@ -14,4 +14,11 @@ $('.copy-icon').on('click',
   () => {
     $('.email-text').addClass('hidden');
     $('.copied-text').removeClass('hidden');
+    setTimeout(
+      () => {
+        $('.site-nav .btn-inner').removeClass('small');
+        $('.contact-text').removeClass('hidden');
+        $('.email-text').addClass('hidden');
+        $('.copied-text').addClass('hidden');
+      }, 2000);
   });
