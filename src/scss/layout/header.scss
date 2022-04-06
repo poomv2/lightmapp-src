@@ -315,17 +315,29 @@ body { overflow-x: hidden; }
   }
 
   h1 {
-    padding: 0 30px;
+    padding: 0;
     opacity: 0;
     animation: fade-down 800ms forwards, grad-flow 8s linear infinite;
 
+    @media screen and (min-width: 454px) and (max-width: 511px) {
+      padding: 0 20px;
+    }
+
+    @media screen and (min-width: 512px) and (max-width: 767px) {
+      padding: 0 30px;
+    }
+
     @include breakpoint(tablet) {
+      padding: 0 30px;
+    }
+
+    @include breakpoint(desktop) {
       padding: 0;
     }
   }
 
   p {
-    padding: 0 30px;
+    padding: 0 20px;
     margin-bottom: 5px;
     line-height: 27px;
     text-align: center;
