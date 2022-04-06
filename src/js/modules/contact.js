@@ -20,5 +20,5 @@ $('.copy-icon').on('click',
         $('.contact-text').removeClass('hidden');
         $('.email-text').addClass('hidden');
         $('.copied-text').addClass('hidden');
-      }, 2000);
+      }, 3000);
   });
