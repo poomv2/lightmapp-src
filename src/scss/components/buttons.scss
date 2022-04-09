@@ -5,11 +5,12 @@
     border: 0;
     border-radius: 5px;
     font-weight: 700;
+    font-size: 16px;
     background-color: transparent;
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: .8px;
-    transition: background 300ms, transform 300ms;
+    transition: all 300ms;
     box-shadow: 0 30px 20px -20px rgba(0,0,0,0);
   
     &:hover {
@@ -20,7 +21,18 @@
   
   .btn-primary {
     padding: 10px 23px 8px;
-    background-image: linear-gradient(to bottom, #1700FE 0%, #730AFC 100%); 
+    background-image: linear-gradient(to bottom, #1700FE 0%, #730AFC 100%);
+    transition: all 500ms;
+    letter-spacing: 1px;
+
+    &:hover {
+      // box-shadow: 0 0 8px  #2815ff;
+
+      span {
+        display: block;
+        transform: translateY(-10px);
+      }
+    }
   }
   
   .btn-secondary {
@@ -39,7 +51,7 @@
       display: flex;
       justify-content: center;
       height: 100%;
-      transition: width .5s ease;
+      transition: opacity .5s ease;
       width: 100%;
 
       @media screen and (max-width: 380px) {

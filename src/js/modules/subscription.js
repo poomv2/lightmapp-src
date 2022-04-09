@@ -48,6 +48,11 @@ const sendEmail = (email) => {
     success({ totalJoined }) {
       setCounter(totalJoined);
       setEmailValidationText();
+
+      setTimeout(() => {
+        $('.email-signup').css('display', 'none');
+        $('.thank-you').css('display', 'block');
+      }, 500);
     },
     error: (err) => {
       if (err.status === 400) {
@@ -87,6 +92,8 @@ const subscription = () => {
 
     if (emailValidation(email)) {
       sendEmail(email);
+
+
     }
   });
 };

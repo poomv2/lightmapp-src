@@ -8,6 +8,7 @@ import './modules/phone-animation';
 import subscription from './modules/subscription';
 import './modules/contact';
 import './modules/parallax';
+import './modules/modal-video';
 
 // When DOM is ready
 $(() => {

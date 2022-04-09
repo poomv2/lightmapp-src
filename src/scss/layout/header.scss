@@ -30,9 +30,14 @@ body { overflow-x: hidden; }
   position: relative;
   z-index: 5;
   text-align: center;
+  transition: all 300ms ease;
 
   @include breakpoint(tablet) {
     text-align: left;
+  }
+
+  &:hover {
+    transform: translateY(-4px);
   }
 }
 
@@ -47,7 +52,7 @@ body { overflow-x: hidden; }
   background-image: url('../images/backgrounds/sphere-1.png');
   background-size: cover;
   background-repeat: no-repeat;
-  animation: bounce 6s infinite ease-in-out;
+  animation: bounce2 6s infinite ease-in-out;
 
   @include breakpoint(tablet) {
     display: inline-block;
@@ -65,7 +70,7 @@ body { overflow-x: hidden; }
   background-image: url('../images/backgrounds/sphere-2.png');
   background-size: cover;
   background-repeat: no-repeat;
-  animation: bounce 4s infinite ease-in-out;
+  animation: bounce 6s infinite ease-in-out;
 
   @include breakpoint(tablet) {
     display: inline-block;
@@ -215,8 +220,9 @@ body { overflow-x: hidden; }
 
       .btn {
         min-width: initial;
+        transition: transform 300ms;
 
-        &:hover { transform: translateY(0); }
+        // &:hover { transform: translateY(0); }
       }
 
       .btn-inner.small {
