@@ -30,7 +30,6 @@ $(document).ready(() => {
   $('.video-btn').click(function () {
     $videoSrc = $(this).data('src');
   });
-  console.log($videoSrc);
 
   // when the modal is opened autoplay it
   $('#myModal').on('shown.bs.modal', (e) => {
@@ -41,7 +40,7 @@ $(document).ready(() => {
   // stop playing the youtube video when I close the modal
   $('#myModal').on('hide.bs.modal', (e) => {
     // a poor man's stop video
-    $('#video').attr('src', '#');
+    $('#video').attr('src', $videoSrc);
   });
 
   // document ready
