@@ -1,7 +1,7 @@
 import $ from 'jquery';
 import ClipboardJS from 'clipboard';
 
-new ClipboardJS('.copy-icon');
+new ClipboardJS('.email-text');
 
 $('.btn-copy').on('click',
   () => {
@@ -10,7 +10,7 @@ $('.btn-copy').on('click',
     $('.email-text').removeClass('hidden');
   });
 
-$('.copy-icon').on('click',
+$('.email-text').on('click',
   () => {
     $('.email-text').addClass('hidden');
     $('.copied-text').removeClass('hidden');
@@ -20,5 +20,6 @@ $('.copy-icon').on('click',
         $('.contact-text').removeClass('hidden');
         $('.email-text').addClass('hidden');
         $('.copied-text').addClass('hidden');
-      }, 3000);
+      }, 3000,
+    );
   });
